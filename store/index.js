@@ -3,26 +3,38 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-const store = new Vuex.Store({
+const moduleA = {
 	state: {
-		accessToken: null,
-		username: null
+		count: 3
 	},
 	mutations: {
-		setAccessToken(state, provider) {
-			console.log('setAccessToken');
-            console.log(state);
-            console.log(provider);
-			state.accessToken = provider.accessToken;
-		},
-		setUsername(state,provider){
-			console.log('setUsername');
-			console.log(state);
-            console.log(provider);
-			state.username = provider.username;
-		}
+
 	},
-	
-});
+	actions: {
+
+	},
+	getters: {
+
+	}
+}
+
+const moduleB = {
+	state: {
+		count: 5
+	},
+	mutations: {
+
+	},
+	actions: {
+
+	}
+}
+
+const store = new Vuex.Store({
+	modules: {
+		a: moduleA,
+		b: moduleB
+	}
+})
 
 export default store;

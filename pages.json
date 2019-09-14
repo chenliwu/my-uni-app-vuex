@@ -18,6 +18,10 @@
             "path" : "pages/authenticationFaild/authenticationFaild",
             "style" : {}
         }
+        ,{
+            "path" : "pages/testModuleStore/testModuleStore",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
