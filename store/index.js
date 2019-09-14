@@ -22,6 +22,7 @@ const store = new Vuex.Store({
 			state.username = provider.username;
 		}
 	},
+	
 });
 
 export default store;
