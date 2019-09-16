@@ -8,7 +8,10 @@ const moduleA = {
 		count: 3
 	},
 	mutations: {
-
+		increment(state) {
+			// 变更状态
+			state.count++
+		}
 	},
 	actions: {
 
@@ -23,7 +26,10 @@ const moduleB = {
 		count: 5
 	},
 	mutations: {
-
+		increment(state) {
+			// 变更状态
+			state.count++
+		}
 	},
 	actions: {
 

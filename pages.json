@@ -22,6 +22,10 @@
             "path" : "pages/testModuleStore/testModuleStore",
             "style" : {}
         }
+        ,{
+            "path" : "pages/testModuleStore1/testModuleStore1",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

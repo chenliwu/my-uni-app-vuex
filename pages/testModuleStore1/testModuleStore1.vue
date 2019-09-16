@@ -8,6 +8,11 @@
 		<view>
 			<text>moduleBCount:{{ this.$store.state.b.count }}</text>
 		</view>
+		<view>
+			<text>
+				
+			</text>
+		</view>
 	</view>
 </template>
 
@@ -25,10 +30,19 @@ export default {
 			let moduleBCount = this.$store.state.b.count;
 			console.log('moduleB.state.count:', moduleBCount);
 		},
+		/**
+		 * module未启用namespace的情况下：
+		 * 通过store的mutation更改state。
+		 *
+		 * 问题记录与思考：
+		 * 1、如果module A和module B有一个mutation是同名的，
+		 * 那么this.$store.commit("increment");这语句会调用哪个module的increment呢？
+		 *
+		 * 代码运行结果：结果是module A和module B的increment都调用了一次。
+		 *
+		 */
 		setStoreInfo: function() {
-			// 对store的属性赋值的基本方法：直接赋值
-			this.$store.state.a.count = 7;
-			this.$store.state.b.count = 8;
+			this.$store.commit('increment');
 		}
 	}
 };
