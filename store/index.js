@@ -9,15 +9,25 @@ const moduleA = {
 	},
 	mutations: {
 		increment(state) {
+			console.log("mutations.increment");
 			// 变更状态
 			state.count++
 		}
 	},
+	/**
+	 * 分发 Action
+	 * Action 通过 store.dispatch 方法触发：
+	 */
 	actions: {
-
+		increment(context) {
+			console.log("actions.increment");
+			context.commit('increment')
+		}
 	},
 	getters: {
-
+		getCount:function(state){
+			return state.count;
+		}
 	}
 }
 
